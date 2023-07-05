@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none !important;
+    box-sizing: border-box;
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #0A121F;
+    position: fixed;
+    width: 100%;
+}
+.header .navbar a{
+ margin-right: 20px;
+ color: #fff;
+ font-size: 17px;
+ transition: all 0.3s ease;
+}
+
+.btn-color{
+    background-color: #167bee7e;
+    color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 10px 20px;
+}
+.menu{
+    position: absolute;
+    color: #fff;
+    font-size: 34px;
+    cursor: pointer;
+    top: 35px;
+    right: 55px;
+    border: 1px solid #ccc;
+    display: none;
+}
+.overlay{
+    background-color: rgba(0,0,0,.9);
+    height: 100vh;
+    position: fixed;
+    width: 0;
+    z-index: 100;
+    overflow-x: hidden;
+    top: 0;
+    left: 0;
+    transition: width 0.4s ease;
+}
+.active{
+    width: 100%;
+}
+.close{
+    position: absolute;
+    top: 45px;
+    right: 55px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 34px;
+}
+.overlay .overlay-menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+}
+.overlay .overlay-menu a{
+    margin-top: 20px;
+    color: #aaa;
+    font-size: 22px;
+    transition: all 0.3s ease;
+}
+.overlay .overlay-menu a:hover{
+    color: #fff;
+}
+
+
+@media(min-width:1400px){
+    .header{
+        padding-top: 20px ;
+        padding-left: 280px;
+        padding-right: 280px;
+    }
+}
+
+@media(max-width:991px){
+    .header .navbar{
+        display: none;
+    }
+    .menu{
+        display: flex;
+    }
+    .header button{
+        display: none;
+    }
+}
+@media(max-width:500px){
+    .header .logo img{
+        width: 200px;
+    }
+    .header button{
+        padding: 8px 12px;
+    }
+}
